@@ -41,14 +41,14 @@ export default function Meme() {
   //JS object destructuring
   const handleTextChange = (event) => {
     const { name, value } = event.target;
-    setMeme((prevMeme) => ({ ...prevMeme, [name]: value }));
+    setMeme((prevState) => ({ ...prevState, [name]: value }));
   };
 
   //Event handler - onClick for clear textbox
   const handleClearText = () => {
     //Access prevstate and only update topText & bottomText
-    setMeme((prevText) => ({
-      ...prevText,
+    setMeme((prevState) => ({
+      ...prevState,
       topText: "",
       bottomText: "",
     }));
